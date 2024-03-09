@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "9d1234bc-960e-4722-84d1-460adddc90b6",
+		"name": "Reminder_App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33497787"
+	},
+	"item": [
+		{
+			"name": "get_all_reminders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_all/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_all",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_reminder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "date",
+							"value": "2024-03-10",
+							"description": "give the date this format",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "23:59",
+							"description": "give the time between 01:00 to 23:59",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "Don't forget the meeting bro",
+							"type": "text"
+						},
+						{
+							"key": "reminder_type",
+							"value": "Email",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete reminder",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/delete/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"delete",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_reminder",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "date",
+							"value": "2024-03-10",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "02:59",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "water reminder bro",
+							"type": "text"
+						},
+						{
+							"key": "reminder_type",
+							"value": "Email",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update",
+						"7",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_detail_view_reminder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reminder_detail/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reminder_detail",
+						"7",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
